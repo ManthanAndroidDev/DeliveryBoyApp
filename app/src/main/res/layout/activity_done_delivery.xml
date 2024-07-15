@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5D9DA"
+    tools:context=".MainActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="350dp" />
+
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/capture"
+        android:layout_marginStart="10dp">
+
+        <RadioButton
+            android:id="@+id/good_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GOOD" />
+
+        <RadioButton
+            android:id="@+id/damage_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DAMAGE" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/damage_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/group"
+        android:background="@drawable/custom_textfield"
+        android:layout_marginHorizontal="15dp"
+        android:hint="Enter the damage type"
+        android:paddingStart="10dp" />
+
+    <EditText
+        android:id="@+id/collected_amount"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_textfield"
+        android:layout_below="@id/damage_type"
+        android:layout_marginHorizontal="15dp"
+        android:hint="Enter the collected amount"
+        android:paddingStart="10dp" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/collected_amount"
+        android:background="@drawable/custoom_button"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="10dp"
+        android:text="SUBMIT"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+    <ImageButton
+        android:id="@+id/capture"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cameraPreview"
+        android:layout_marginBottom="40sp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="centerCrop"
+        android:src="@drawable/round_camera_24"
+        app:tint="#fff" />
+
+    <ImageButton
+        android:id="@+id/toggleFlash"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10sp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/baseline_flash_on_24"
+        app:tint="#fff" />
+
+    <ImageButton
+        android:id="@+id/flipCamera"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_below="@id/toggleFlash"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10sp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/round_flip_camera_android_24"
+        app:tint="#fff" />
+
+</RelativeLayout>
